@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -22,6 +23,17 @@
     <div v-else>
       <p>No greetings</p>
     </div>
+    
+    <!-- <button
+      class="btn btn-primary"
+      v-on:click="showGreetings = !showGreetings"
+    > -->
+    <button
+      class="btn btn-primary"
+      @click="showGreetings = !showGreetings"
+    >
+    [[ showGreetings ? '隠す' : '表示する' ]]
+    </button>
   </div>
 </body>
 <script src="static/js/modules/bootstrap.bundle.min.js"></script>
