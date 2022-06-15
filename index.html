@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -11,24 +10,41 @@
 </head>
 <body>
   <div id="app">
-    <h3>[[ data ]]</h3>
-
-    <div v-if="showGreetings">
-      <div v-for="(greeting, index) in greetings">
-        <!-- <p v-bind:class="">[[ index ]]: [[ greeting ]]</p> -->
-        <p :class="index === 1 ? 'text-primary' : 'text-danger'">[[ index ]]: [[ greeting ]]</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h3>[[ data ]]</h3>
+          <div v-if="showGreetings">
+            <div v-for="(greeting, index) in greetings">
+              <p :class="index === 1 ? 'text-primary' : 'text-danger'">[[ index ]]: [[ greeting ]]</p>
+            </div>
+          </div>
+          <div v-else>
+            <p>No greetings</p>
+          </div>
+          
+          <button
+            class="btn btn-primary"
+            @click="toggleShowGreetings"
+          >
+            [[ showGreetings ? '隠す' : '表示する' ]]
+          </button>
+        </div>
+        <div class="col-6">
+          <input type="text" class="form-control" v-model="newGreeting">
+          <p>newGreeting: [[ newGreeting ]]</p>
+          <div>
+            <button
+              class="btn btn-primary"
+              @click="addGreeting"
+              :disabled="newGreeting === ''"
+            >
+              追加する
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <div v-else>
-      <p>No greetings</p>
-    </div>
-    
-    <button
-      class="btn btn-primary"
-      @click="toggleShowGreetings"
-    >
-      [[ showGreetings ? '隠す' : '表示する' ]]
-    </button>
   </div>
 </body>
 <script src="static/js/modules/bootstrap.bundle.min.js"></script>

@@ -4,11 +4,16 @@ const App = {
       data: 'Hello world',
       greetings: ['おはよう', 'こんにちは', 'こんばんは'],
       showGreetings: true,
+      newGreeting: '',
     };
   },
   methods: {
     toggleShowGreetings(){
-      this.showGreetings = !this.showGreetings
+      this.showGreetings = !this.showGreetings;
+    },
+    addGreeting(){
+      this.greetings.push(this.newGreeting);
+      this.newGreeting = '';
     },
   },
   compilerOptions: {
