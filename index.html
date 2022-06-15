@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -13,8 +12,6 @@
   <div id="app">
     <h3>[[ data ]]</h3>
 
-    <!-- indexなしもできる -->
-    <!-- <div v-for="greeting in greetings"> -->
     <div v-if="showGreetings">
       <div v-for="(greeting, index) in greetings">
         <p>[[ index ]]: [[ greeting ]]</p>
@@ -24,15 +21,11 @@
       <p>No greetings</p>
     </div>
     
-    <!-- <button
-      class="btn btn-primary"
-      v-on:click="showGreetings = !showGreetings"
-    > -->
     <button
       class="btn btn-primary"
-      @click="showGreetings = !showGreetings"
+      @click="toggleShowGreetings"
     >
-    [[ showGreetings ? '隠す' : '表示する' ]]
+      [[ showGreetings ? '隠す' : '表示する' ]]
     </button>
   </div>
 </body>

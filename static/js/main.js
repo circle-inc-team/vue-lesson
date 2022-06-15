@@ -6,6 +6,11 @@ const App = {
       showGreetings: true,
     };
   },
+  methods: {
+    toggleShowGreetings(){
+      this.showGreetings = !this.showGreetings
+    },
+  },
   compilerOptions: {
     delimiters: ['[[', ']]'],
   },
