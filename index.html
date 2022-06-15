@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,7 +15,8 @@
 
     <div v-if="showGreetings">
       <div v-for="(greeting, index) in greetings">
-        <p>[[ index ]]: [[ greeting ]]</p>
+        <!-- <p v-bind:class="">[[ index ]]: [[ greeting ]]</p> -->
+        <p :class="index === 1 ? 'text-primary' : 'text-danger'">[[ index ]]: [[ greeting ]]</p>
       </div>
     </div>
     <div v-else>
