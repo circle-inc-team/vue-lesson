@@ -1,7 +1,8 @@
 const App = {
   data() {
     return {
-      data: 'Hello world'
+      data: 'Hello world',
+      greetings: ['おはよう', 'こんにちは', 'こんばんは'],
     };
   },
   compilerOptions: {

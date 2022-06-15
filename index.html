@@ -10,7 +10,13 @@
 </head>
 <body>
   <div id="app">
-    <div>[[ data ]]</div>
+    <h3>[[ data ]]</h3>
+
+    <!-- indexなしもできる -->
+    <!-- <div v-for="greeting in greetings"> -->
+    <div v-for="(greeting, index) in greetings">
+      <p>[[ index ]]: [[ greeting ]]</p>
+    </div>
   </div>
 </body>
 <script src="static/js/modules/bootstrap.bundle.min.js"></script>
