@@ -7,6 +7,9 @@ const App = {
       newGreeting: '',
     };
   },
+  mounted() {
+    console.log('mounted');
+  },
   methods: {
     toggleShowGreetings(){
       this.showGreetings = !this.showGreetings;
