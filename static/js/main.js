@@ -3,6 +3,7 @@ const App = {
     return {
       data: 'Hello world',
       greetings: ['おはよう', 'こんにちは', 'こんばんは'],
+      showGreetings: true,
     };
   },
   compilerOptions: {

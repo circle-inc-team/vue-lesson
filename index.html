@@ -14,8 +14,13 @@
 
     <!-- indexなしもできる -->
     <!-- <div v-for="greeting in greetings"> -->
-    <div v-for="(greeting, index) in greetings">
-      <p>[[ index ]]: [[ greeting ]]</p>
+    <div v-if="showGreetings">
+      <div v-for="(greeting, index) in greetings">
+        <p>[[ index ]]: [[ greeting ]]</p>
+      </div>
+    </div>
+    <div v-else>
+      <p>No greetings</p>
     </div>
   </div>
 </body>
